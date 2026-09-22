@@ -1,0 +1,14 @@
+# Local environment files
+.env
+*.local
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Frontend dependencies and build output
+frontend/note-app/node_modules/
+frontend/note-app/dist/
+
+# Local database
+notes/db.sqlite3

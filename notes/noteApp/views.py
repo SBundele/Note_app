@@ -9,7 +9,7 @@ from rest_framework import status
 @api_view(["GET", "POST"])
 def notes(request):
     if request.method == 'GET':
-        notes = Note.objects.all()
+        notes = Note.objects.all().order_by('-updated', '-id')
         serializers = NoteSerializer(notes, many=True)
         return Response(serializers.data)
     elif request.method == 'POST':

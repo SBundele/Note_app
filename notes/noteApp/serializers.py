@@ -5,3 +5,4 @@ class NoteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Note
         fields = ["id", "title", "body", "slug", "category", "created", "updated"]
+        read_only_fields = ["id", "slug", "created", "updated"]

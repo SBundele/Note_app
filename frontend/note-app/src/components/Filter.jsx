@@ -1,8 +1,11 @@
-import React from 'react'
+import PropTypes from "prop-types";
 
-export default function Filter() {
+export default function Filter({ handleFilterText }) {
   return (
-    <div className="container" style={{ width: "500px", margin: "20px auto" }}>
+    <div
+      className="container"
+      style={{ width: "100%", maxWidth: "500px", margin: "20px auto" }}
+    >
       <select
         className="form-select"
         aria-label="Default select example"
@@ -17,3 +20,7 @@ export default function Filter() {
     </div>
   );
 }
+
+Filter.propTypes = {
+  handleFilterText: PropTypes.func.isRequired,
+};
